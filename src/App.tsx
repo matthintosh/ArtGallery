@@ -1,9 +1,9 @@
 import { AppLayout } from "./design/Layouts/AppLayout";
-import { GridLayout } from "./design/Layouts/GridLayout";
 import { AppHeader } from "./components/AppHeader";
+import { CollectionGrid } from "./features/CollectionGrid/CollectionGrid";
 
 function App() {
-  return <AppLayout Header={<AppHeader />} Content={<GridLayout />} />;
+  return <AppLayout Header={<AppHeader />} Content={<CollectionGrid />} />;
 }
 
 export default App;

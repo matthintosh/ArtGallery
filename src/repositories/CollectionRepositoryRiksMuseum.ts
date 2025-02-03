@@ -5,7 +5,7 @@ import {
   CollectionResponseSchema,
 } from "./schema/RiskMuseumSchema";
 
-const COLLECTION_URL = `https://www.rijksmuseum.nl/api/en/collection?key=${import.meta.env.VITE_RISK_MUSEUM_API_KEY}`;
+const COLLECTION_URL = `https://www.rijksmuseum.nl/api/en/collection?key=${import.meta.env.VITE_RISK_MUSEUM_API_KEY}&imgonly=true`;
 const DEFAULT_PAGE_SIZE = 20;
 
 export class CollectionRepositoryRiksMuseum implements CollectionRepository {
