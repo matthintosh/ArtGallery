@@ -11,4 +11,5 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   backdrop-filter: blur(10px);
+  z-index: 100;
 `;
