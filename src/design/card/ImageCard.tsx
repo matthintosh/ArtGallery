@@ -19,7 +19,7 @@ export const ImageCard = ({ imgUrl, imgAlt, caption }: ImageCardProps) => {
       <img src={imgUrl} loading="lazy" alt={imgAlt} />
 
       <ImageCardCaptionContainer style={{ opacity: displayCaption ? 1 : 0 }}>
-        <p style={{ padding: "0.5rem" }}>{caption}</p>
+        {caption}
       </ImageCardCaptionContainer>
     </Card>
   );
@@ -29,13 +29,19 @@ const ImageCardCaptionContainer = styled.div`
   position: absolute;
   color: white;
   bottom: 0;
-  width: 100%;
+  min-width: -webkit-fill-available;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
   border-radius: 0 0 0.75rem 0.75rem;
-  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  padding: 0.3rem;
 `;
