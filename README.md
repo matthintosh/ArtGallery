@@ -21,3 +21,32 @@ You must set your API key in the `.env` file.
 
 Create a `.env` file in the root of the project and add the following line:
 `VITE_RISK_MUSEUM_API_KEY="YOUR_API_KEY"`
+
+## Running storybook for components
+
+Storybook is a tool to visualize your component library
+To run storybook, use the following command:
+
+```bash
+npm run storybook
+```
+
+Then you can view your components in the browser at http://localhost:6006.
+
+NB : Not all designed components are currently visualized.
+
+## Running e2e tests
+
+First you need to start the dev server.
+
+To run e2e tests, use the following command:
+
+```bash
+npm run e2e
+```
+
+If you want to run e2e tests with UI, use the following command:
+
+```bash
+npm run e2e:ui
+```
