@@ -18,7 +18,7 @@ export const SearchForm = ({
 }: SearchFormProps) => {
   return (
     <SearchFormContainer onSubmit={onSubmit}>
-      <SearchInput {...inputProps} />
+      <SearchInput {...inputProps} data-testid="search-input" />
       {SubmitButton}
     </SearchFormContainer>
   );

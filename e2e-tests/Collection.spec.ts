@@ -31,3 +31,16 @@ test("Load more button", async ({ page }) => {
   const artCardSecondPage = await page.getByTestId("image-card");
   expect(await artCardSecondPage.count()).toEqual(40);
 });
+
+test("Search for something", async ({ page }) => {
+  await page.goto(LOCAL_URL);
+  const collectionSearch = await page.getByTestId("search-input");
+  await expect(collectionSearch).toBeVisible();
+
+  await collectionSearch.fill("Van gogh");
+  await collectionSearch.press("Enter");
+
+  await page.waitForTimeout(500);
+  const artCardFirstPage = await page.getByTestId("image-card");
+  expect(await artCardFirstPage.count()).toEqual(20);
+});
