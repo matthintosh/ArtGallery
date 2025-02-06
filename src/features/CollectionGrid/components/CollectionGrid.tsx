@@ -16,7 +16,7 @@ export const CollectionGrid = () => {
   }
 
   return (
-    <GridLayout>
+    <GridLayout data-testid="collection-grid">
       {artObjects.map((artObject: ArtObject) => (
         <ArtCard artObject={artObject} key={artObject.id} />
       ))}

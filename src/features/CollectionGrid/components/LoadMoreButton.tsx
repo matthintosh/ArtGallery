@@ -12,6 +12,7 @@ export const LoadMoreButton = () => {
       $loading={isFetchingNextPage}
       onClick={fetchNextPage}
       style={{ alignSelf: "center" }}
+      data-testid="load-more-button"
     >
       Load more
     </Button>

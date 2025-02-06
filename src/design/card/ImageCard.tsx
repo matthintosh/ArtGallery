@@ -15,6 +15,7 @@ export const ImageCard = ({ imgUrl, imgAlt, caption }: ImageCardProps) => {
       style={{ position: "relative" }}
       onMouseEnter={() => setDisplayCaption(true)}
       onMouseLeave={() => setDisplayCaption(false)}
+      data-testid="image-card"
     >
       <img src={imgUrl} loading="lazy" alt={imgAlt} />
 
