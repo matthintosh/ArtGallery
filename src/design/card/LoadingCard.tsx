@@ -11,6 +11,10 @@ const LoadingCardSkeleton = styled.div`
   background-size: 200% 100%;
   animation: pulse 1s ease-in-out infinite;
   height: 150px;
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(90deg, #444 0%, #333 50%, #444 100%);
+    background-size: 200% 100%;
+  }
   @media ${BreakPoints.md} {
     height: 300px;
   }
