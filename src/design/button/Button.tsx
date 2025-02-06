@@ -9,6 +9,13 @@ export const Button = styled.button<{ $loading?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: black;
+  }
   ${(props) =>
     props.$loading &&
     `
@@ -25,6 +32,7 @@ export const Button = styled.button<{ $loading?: boolean }>`
     border-top-color: transparent;
     animation: spinner 1s linear infinite;
   }
+    
   @keyframes spinner {
     0% {
       transform: rotate(0deg);
