@@ -5,6 +5,7 @@ import { z } from "zod";
  */
 const ArtObjectSchema = z.object({
   id: z.string(),
+  objectNumber: z.string(),
   title: z.string(),
   longTitle: z.string(),
   principalOrFirstMaker: z.string(),
